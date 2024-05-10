@@ -2,6 +2,9 @@ from typing import List
 
 # https://leetcode.com/problems/two-sum/
 # Beats 84.25% of users with Python3
+# TODO: Current version is O(n^2). To achieve better result, we should sort "nums" via O(n*log(n)) algorithm,
+# and then set left=0 and right=len(nums)-1, then (a) left++ and (b) right-- 
+# and compare the sum of elements along the way for each increment or decrement of indicies.
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
